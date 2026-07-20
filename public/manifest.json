@@ -1,0 +1,13 @@
+{
+  "name": "CREO Positano Glasses",
+  "short_name": "CREO",
+  "description": "Gestione ordini clienti CREO Positano Glasses",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#191c20",
+  "theme_color": "#191c20",
+  "icons": [
+    {"src": "/api/icon?v=2", "sizes": "192x192", "type": "image/png"},
+    {"src": "/api/icon?v=2", "sizes": "512x512", "type": "image/png"}
+  ]
+}

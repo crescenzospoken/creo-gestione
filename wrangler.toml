@@ -1,0 +1,11 @@
+name = "creopositano"
+compatibility_date = "2026-01-01"
+pages_build_output_dir = "public"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "creopositano-db"
+database_id = "c5e2032d-d20a-4fbe-a754-4db17ed3e762"
+
+[ai]
+binding = "AI"

@@ -1,0 +1,5 @@
+node_modules/
+.wrangler/
+seed/
+data/keys.json
+*.log
