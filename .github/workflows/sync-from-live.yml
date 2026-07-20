@@ -9,11 +9,11 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Scarica gli asset pubblicati
         run: |
           for f in index.html app.js style.css sw.js manifest.json robots.txt; do
-            curl -fsS "https://creopositano.pages.dev/$f" -o "public/$f"
+            curl -fsSL "https://creopositano.pages.dev/$f" -o "public/$f"
           done
       - name: Commit se ci sono differenze
         run: |
