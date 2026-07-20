@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>CREO Positano · Clienti</title>
+<link rel="stylesheet" href="style.css?v=25">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#191c20">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="apple-touch-icon" href="/api/icon?v=2">
+<link rel="icon" type="image/png" href="/api/icon?v=2">
+</head>
+<body>
+<div id="login" class="hidden">
+  <div class="box">
+    <img class="loginlogo" src="https://cdn.shopify.com/s/files/1/0805/4892/1693/files/LOGO_DEF-2.png?v=1729076245" alt="CREO Positano Glasses">
+    <div class="sub">Gestione ordini clienti</div>
+    <input id="pw" type="password" placeholder="Password" autocomplete="current-password">
+    <button id="loginbtn">Entra</button>
+    <div class="err" id="loginerr"></div>
+  </div>
+</div>
+
+<div id="app" class="hidden">
+  <div id="topbar">
+    <img class="toplogo" src="https://cdn.shopify.com/s/files/1/0805/4892/1693/files/LOGO_DEF-2.png?v=1729076245" alt="CREO Positano Glasses" title="CREO Positano Glasses">
+    <div class="tabs">
+      <button id="tab-list" class="active">Lista</button>
+      <button id="tab-dash">Dashboard</button>
+    </div>
+    <button class="btn" id="yearbtn">📅 Tutti ▾</button>
+    <button class="btn" id="selbtn" title="Selezione multipla">☑</button>
+    <button class="btn" id="actbtn" title="Attività recenti">🕘</button>
+    <input id="search" type="search" placeholder="Cerca cliente, modello, telefono…">
+    <div class="grow"></div>
+    <button class="btn" id="aibtn" title="Scrivi gli ordini in libertà, li compilo io">✨ AI</button>
+    <button class="btn primary" id="newbtn">+ Nuovo ordine</button>
+    <button class="btn" id="setbtn" title="Impostazioni">⚙</button>
+    <button class="btn" id="logoutbtn" title="Esci">Esci</button>
+  </div>
+
+  <div id="view-list">
+    <div id="list"></div>
+  </div>
+
+  <div id="view-dash" class="hidden">
+    <div id="dash">
+      <div id="dashyears"></div>
+      <div id="dashbody" class="dgrid"></div>
+    </div>
+  </div>
+</div>
+
+<div id="drawer"></div>
+<div id="modal" class="hidden"></div>
+<div id="pop" class="hidden"></div>
+<div id="bulkbar" class="hidden"></div>
+<div id="toast"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script src="app.js?v=25"></script>
+</body>
+</html>
