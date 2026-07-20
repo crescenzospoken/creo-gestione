@@ -1,0 +1,24 @@
+name: Sincronizza dal sito
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '30 5 * * 1'
+permissions:
+  contents: write
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Scarica gli asset pubblicati
+        run: |
+          for f in index.html app.js style.css sw.js manifest.json robots.txt; do
+            curl -fsS "https://creopositano.pages.dev/$f" -o "public/$f"
+          done
+      - name: Commit se ci sono differenze
+        run: |
+          git config user.name "sync-bot"
+          git config user.email "actions@github.com"
+          git add public
+          git diff --cached --quiet || git commit -m "Sync asset dal sito live"
+          git push
